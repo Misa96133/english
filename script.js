@@ -17,3 +17,8 @@ hamburger.addEventListener("click", function () {
     hamburger.classList.toggle("active");
     navi.classList.toggle("active");
 });
+
+
+navi.addEventListener("click", function (){
+    navi.classList.remove("active");
+});

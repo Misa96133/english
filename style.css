@@ -1,11 +1,21 @@
 @charset "utf-8";
 
+html {
+    font-size: 100%;
+}
+
 img {
     max-width: 100%;
 }
 
 li {
     list-style: none;
+}
+
+body {
+    color: #333;
+    font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    letter-spacing: 0.1em;
 }
 
 .wrapper {
@@ -637,6 +647,16 @@ li {
         top: 70%;
     }
 
+    .hamburger.active span:nth-child(1) {
+        top: 37px;
+        left: 21px;
+    }
+
+    .hamburger.active span:nth-child(2),
+    .hamburger.active span:nth-child(3) {
+        top: 37px;
+    }
+
     #navi .logo {
         top: 25px;
         left: 25px;
@@ -716,10 +736,10 @@ li {
         text-align: center;
     }
 
-    #voice .item1,
-    #voice .item2,
-    #voice .item3 {
-        margin-bottom: 40px;
+    #voice .item1 .text,
+    #voice .item2 .text,
+    #voice .item3 .text {
+        margin: 0 0 30px 0;
     }
 
     #voice .item1,
@@ -734,20 +754,21 @@ li {
         align-items: center;
     }
 
-    #voice .item1 .text::before,
-    #voice .item2 .text::before,
-    #voice .item3 .text::before {
+    #voice .item1 .text ::before,
+    #voice .item2 .text ::before,
+    #voice .item3 .text ::before {
         top: 100%;
+        left: 50%;
         border: 15px solid transparent;
         border-top: 15px solid #e9f1fb;
     }
 
-    #voice .item1 .text::before,
-    #voice .item3 .text::before {
-        margin-left: calc(50% - 15px);
+    #voice .item1 .text ::before,
+    #voice .item3 .text ::before {
+        margin-left: calc(50% - 150px);
     }
 
-    #voice .item2 .text::before {
+    #voice .item2 .text ::before {
         margin-right: calc(50% - 15px);
     }
 
@@ -804,11 +825,11 @@ li {
         font-size: 0.9375rem;
     }
 
-    #footer .inner >li {
+    #footer .inner>li {
         width: 50%;
     }
 
-    #footer .inner >li{
+    #footer .inner>li {
         margin-bottom: 30px;
     }
 }
